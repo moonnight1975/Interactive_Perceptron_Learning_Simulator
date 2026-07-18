@@ -1,11 +1,12 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Brain, Home, FlaskConical, BookOpen } from 'lucide-react';
+import { Brain, Home, FlaskConical, BookOpen, Activity } from 'lucide-react';
 
 const NAV_LINKS = [
   { href: '/', label: 'Home', icon: Home },
-  { href: '/simulation', label: 'Simulate', icon: FlaskConical },
+  { href: '/simulation', label: 'Perceptron', icon: FlaskConical },
+  { href: '/mcp', label: 'MCP Lab', icon: Activity },
   { href: '/about', label: 'About', icon: BookOpen },
 ];
 
@@ -23,8 +24,8 @@ export default function Navbar() {
             <Brain size={18} className="text-white" />
           </div>
           <div>
-            <div className="font-bold text-sm gradient-text leading-none">Perceptron</div>
-            <div className="text-[9px] text-[var(--text-muted)] tracking-widest uppercase leading-none">Simulator</div>
+            <div className="font-bold text-sm gradient-text leading-none">Soft Computing</div>
+            <div className="text-[9px] text-[var(--text-muted)] tracking-widest uppercase leading-none">Interactive Lab</div>
           </div>
         </Link>
 

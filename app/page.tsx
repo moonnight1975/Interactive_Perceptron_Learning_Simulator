@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Brain, Zap, BarChart3, BookOpen, ArrowRight, ChevronRight, Cpu, GitBranch, Layers } from 'lucide-react';
+import { Brain, Zap, BarChart3, BookOpen, ArrowRight, ChevronRight, Cpu, GitBranch, Layers, Activity } from 'lucide-react';
 import Navbar from '@/components/ui/Navbar';
 
 const FEATURES = [
@@ -69,25 +69,22 @@ export default function HomePage() {
           <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
             Interactive
             <br />
-            <span className="gradient-text">Perceptron</span>
+            <span className="gradient-text">Soft Computing</span>
             <br />
-            Learning Simulator
+            Interactive Lab
           </h1>
 
           <p className="text-lg md:text-xl text-[var(--text-muted)] max-w-2xl mx-auto mb-10 leading-relaxed">
-            Learn how AI adjusts its weights <strong className="text-white">automatically</strong> until it predicts
-            the correct answer. Watch a perceptron learn logic gates step by step — with live animations,
-            charts, and mathematical explanations.
+            A complete learning environment for Artificial Neural Networks. Explore the foundational McCulloch-Pitts neuron with mathematical proofs, or watch a Perceptron automatically learn logic gates step by step.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/simulation" className="neon-btn neon-btn-primary text-base px-8 py-4">
-              <Brain size={20} /> Start Simulation
-              <ArrowRight size={16} />
+              <Brain size={20} /> Perceptron Simulator
             </Link>
-            <Link href="/about" className="neon-btn neon-btn-secondary text-base px-8 py-4">
-              <BookOpen size={20} /> About Perceptron
+            <Link href="/mcp" className="neon-btn neon-btn-secondary text-base px-8 py-4" style={{ border: '1px solid #00D4FF', background: 'rgba(0,212,255,0.1)', color: '#00D4FF' }}>
+              <Activity size={20} /> MCP Neuron Lab
             </Link>
           </div>
 
@@ -128,6 +125,43 @@ export default function HomePage() {
               <p className="text-[var(--text-muted)] text-sm leading-relaxed">{desc}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ── MCP Lab Section ──────────────────────── */}
+      <section className="px-6 py-10 max-w-7xl mx-auto">
+        <div className="glass-card p-10 md:p-14" style={{ border: '1px solid rgba(0,212,255,0.3)', background: 'radial-gradient(circle at right, rgba(0,212,255,0.1) 0%, transparent 50%)' }}>
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full badge badge-primary text-xs" style={{ background: 'rgba(0,212,255,0.1)', color: '#00D4FF', borderColor: 'rgba(0,212,255,0.3)' }}>
+                <Activity size={12} /> New Module
+              </div>
+              <h2 className="text-3xl md:text-4xl font-black">
+                McCulloch-Pitts <br/><span className="gradient-text" style={{ backgroundImage: 'linear-gradient(to right, #00D4FF, #6C63FF)' }}>Neuron Virtual Lab</span>
+              </h2>
+              <p className="text-[var(--text-muted)] text-lg leading-relaxed">
+                Before the perceptron learned its own weights, the McCulloch-Pitts neuron laid the foundation of AI using manual threshold logic.
+              </p>
+              <ul className="space-y-3 text-sm text-[var(--text-muted)]">
+                <li className="flex items-center gap-2"><span className="text-[#00D4FF]">✓</span> Auto-calculate thresholds using θ ≥ nw − p</li>
+                <li className="flex items-center gap-2"><span className="text-[#00D4FF]">✓</span> &quot;Explain Like Teacher&quot; math proofs</li>
+                <li className="flex items-center gap-2"><span className="text-[#00D4FF]">✓</span> Full Logic Gate Library and custom builder</li>
+                <li className="flex items-center gap-2"><span className="text-[#00D4FF]">✓</span> Interactive Quiz Mode</li>
+              </ul>
+              <div className="pt-4">
+                <Link href="/mcp" className="neon-btn neon-btn-primary text-base px-8 py-4 inline-flex" style={{ background: 'linear-gradient(135deg, #00D4FF, #6C63FF)' }}>
+                  <Activity size={18} /> Open MCP Lab
+                </Link>
+              </div>
+            </div>
+            <div className="relative h-64 md:h-auto md:min-h-[300px] rounded-2xl glass-card flex items-center justify-center p-6 bg-[rgba(0,0,0,0.4)]" style={{ border: '1px solid rgba(0,212,255,0.2)' }}>
+                <div className="text-center font-mono space-y-4">
+                   <div className="text-2xl font-bold" style={{ color: '#00D4FF' }}>Y<sub>in</sub> = Σ x<sub>i</sub>w<sub>i</sub></div>
+                   <div className="text-4xl font-black" style={{ color: '#FFB800' }}>θ ≥ nw − p</div>
+                   <div className="text-[var(--text-muted)] mt-4">Calculates thresholds mathematically</div>
+                </div>
+            </div>
+          </div>
         </div>
       </section>
 
