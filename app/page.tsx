@@ -137,7 +137,7 @@ export default function HomePage() {
                 <Activity size={12} /> New Module
               </div>
               <h2 className="text-3xl md:text-4xl font-black">
-                McCulloch-Pitts <br/><span className="gradient-text" style={{ backgroundImage: 'linear-gradient(to right, #00D4FF, #6C63FF)' }}>Neuron Virtual Lab</span>
+                McCulloch-Pitts <br /><span className="gradient-text" style={{ backgroundImage: 'linear-gradient(to right, #00D4FF, #6C63FF)' }}>Neuron Virtual Lab</span>
               </h2>
               <p className="text-[var(--text-muted)] text-lg leading-relaxed">
                 Before the perceptron learned its own weights, the McCulloch-Pitts neuron laid the foundation of AI using manual threshold logic.
@@ -155,11 +155,11 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative h-64 md:h-auto md:min-h-[300px] rounded-2xl glass-card flex items-center justify-center p-6 bg-[rgba(0,0,0,0.4)]" style={{ border: '1px solid rgba(0,212,255,0.2)' }}>
-                <div className="text-center font-mono space-y-4">
-                   <div className="text-2xl font-bold" style={{ color: '#00D4FF' }}>Y<sub>in</sub> = Σ x<sub>i</sub>w<sub>i</sub></div>
-                   <div className="text-4xl font-black" style={{ color: '#FFB800' }}>θ ≥ nw − p</div>
-                   <div className="text-[var(--text-muted)] mt-4">Calculates thresholds mathematically</div>
-                </div>
+              <div className="text-center font-mono space-y-4">
+                <div className="text-2xl font-bold" style={{ color: '#00D4FF' }}>Y<sub>in</sub> = Σ x<sub>i</sub>w<sub>i</sub></div>
+                <div className="text-4xl font-black" style={{ color: '#FFB800' }}>θ ≥ nw − p</div>
+                <div className="text-[var(--text-muted)] mt-4">Calculates thresholds mathematically</div>
+              </div>
             </div>
           </div>
         </div>
@@ -208,7 +208,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="border-t text-center py-6 text-xs text-[var(--text-muted)]" style={{ borderColor: 'var(--glass-border)' }}>
-        Perceptron Learning Simulator · Built for Engineering Education
+        Perceptron Learning Simulator · Built for Engineering Education · Made by Litto
       </footer>
     </div>
   );
