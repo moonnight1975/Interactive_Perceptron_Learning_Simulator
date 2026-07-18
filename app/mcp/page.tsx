@@ -176,7 +176,7 @@ export default function MCPPage() {
         {/* ── Right Panel ─────────────────────────────────────── */}
         <div className="space-y-4">
           {/* Quick Stats */}
-          <div className="grid grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
             <div className="stat-card">
               <div className="stat-value gradient-text">{config.inputs.length}</div>
               <div className="stat-label">Inputs</div>

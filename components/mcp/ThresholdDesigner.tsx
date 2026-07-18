@@ -45,7 +45,7 @@ export default function ThresholdDesigner({ onThresholdCalculated, initialN = 2,
         <div className="text-lg font-mono font-bold" style={{ color: '#FFB800' }}>θ ≥ nw − p</div>
       </div>
 
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         <div>
           <div className="section-label">n (excitatory)</div>
           <input type="number" min="0" max="10" step="1" value={n} onChange={e => { setN(Number(e.target.value)); setCalculated(false); }} className="neon-input text-center" />

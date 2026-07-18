@@ -136,7 +136,7 @@ export default function SimulationPage() {
         <div className="space-y-4">
           {/* Quick stats */}
           {trainer.steps.length > 0 && (
-            <div className="grid grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
               <div className="stat-card">
                 <div className="stat-value gradient-text">{epochCount}</div>
                 <div className="stat-label">Epoch</div>

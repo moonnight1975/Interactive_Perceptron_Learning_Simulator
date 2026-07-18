@@ -94,7 +94,7 @@ export default function LiveChartsPanel({ steps, currentStepIndex }: LiveChartsP
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-3">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
       {chartConfigs.map(({ title, color, data }) => (
         <div key={title} className="glass-card p-3" style={{ height: 180 }}>
           <Line

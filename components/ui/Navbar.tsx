@@ -44,7 +44,7 @@ export default function Navbar() {
                 }`}
               >
                 <Icon size={15} />
-                {label}
+                <span className="hidden md:inline">{label}</span>
               </Link>
             );
           })}
